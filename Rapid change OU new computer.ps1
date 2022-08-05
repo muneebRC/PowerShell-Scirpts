@@ -27,9 +27,9 @@ function Show-Menu {
     
     Write-Host "================ $Title ================"
     
-    Write-Host "      1: Press '1' for Forest (FOR)"
-    Write-Host "      2: Press '2' for Murray (MUR)"
-    Write-Host "      3: Press '3' for Lynchburg (LYN)"
+    Write-Host "      1: Press '1' for OU1"
+    Write-Host "      2: Press '2' for OU2"
+    Write-Host "      3: Press '3' for OU3"
     Write-Host "      Q: Press 'Q' to quit."
 }
 Show-Menu –Title 'OU Options'
@@ -38,7 +38,7 @@ $selection = Read-Host "Please make a selection"
 switch ($selection)
  {
      '1' {
-         $OU = "OU=Forest (FOR),OU=Domain Computers,DC=mssfulfillment,DC=com"
+         $OU = "OU=OU1,OU=Domain Computers,DC=mssfulfillment,DC=com"
          try {
             
             
@@ -49,7 +49,7 @@ switch ($selection)
             }
 
      } '2' {
-         $OU = "OU=Murray (MUR),OU=Domain Computers,DC=mssfulfillment,DC=com"
+         $OU = "OU=OU2,OU=Domain Computers,DC=DOMAIN,DC=com"
          try {
             
            
@@ -59,7 +59,7 @@ switch ($selection)
             $_.Exception.Message ; Exit 1
             }
      } '3' {
-         $OU = "OU=Lynchburg (LYN),OU=Domain Computers,DC=mssfulfillment,DC=com"
+         $OU = "OU=OU3,OU=Domain Computers,DC=DOMAIN,DC=com"
          try {
             
             
