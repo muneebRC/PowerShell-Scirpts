@@ -1,0 +1,4 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Verbose
+Set-ExecutionPolicy RemoteSigned
+Get-ADGroupMember -Identity "Domain Users" | ForEach-Object {Add-ADGroupMember -Identity "Basic Users" -Members $_.distinguishedName}
+#Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser -Verbose
